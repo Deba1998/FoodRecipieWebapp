@@ -97,6 +97,7 @@
                           <a class="btn btn-sm btn-outline-secondary" href='viewdetails/{{key.prikey}}' role="button">View</a>
                           <a class="btn btn-sm btn-outline-secondary" href='editdetails/{{key.prikey}}' role="button">Edit</a>
                           {% comment %} <a class="btn btn-sm btn-danger" href='deletedetails/{{key.prikey}}' role="button">Delete</a> {% endcomment %}
+                          {% if user.is_authenticated%}
                           <button type="button" class="btn btn-sm btn-danger" onclick="myFunction()">
                             Delete
                           </button>
@@ -111,6 +112,9 @@
                               }
                             }
                             </script>
+                            {% else %}
+                            <a class="btn btn-sm btn-danger" href='deletedetails/{{key.prikey}}' role="button">Delete</a>
+                            {% endif %}
 
                         </div>
                       </div>
