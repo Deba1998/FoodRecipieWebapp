@@ -115,8 +115,8 @@ texttable==1.6.4
 tqdm==4.62.3
 #ubuntu-advantage-tools==27.6
 #ubuntu-drivers-common==0.0.0
-ufw==0.36
-unattended-upgrades==0.1
+#ufw==0.36
+#unattended-upgrades==0.1
 urllib3==1.25.8
 usb-creator==0.3.7
 w3lib==1.22.0
