@@ -19,7 +19,7 @@ colorama==0.4.3
 #crit==0.0.1
 cryptography==2.8
 cssselect==1.1.0
-cupshelpers==1.0
+#cupshelpers==1.0
 cycler==0.10.0
 dblatex===0.3.11py3
 dbus-python==1.2.16
