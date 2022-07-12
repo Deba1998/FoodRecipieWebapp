@@ -9,7 +9,7 @@ certifi
 chardet
 click
 colorama
-command-not-found
+#command-not-found
 crit
 cryptography
 cupshelpers
