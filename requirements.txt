@@ -1,15 +1,15 @@
 alabaster
-# apturl
+apturl
 babel
 bcrypt
 blinker
-#brlapi
+brlapi
 cached-property
 certifi
 chardet
 click
 colorama
-#command-not-found
+command-not-found
 crit
 cryptography
 cupshelpers
