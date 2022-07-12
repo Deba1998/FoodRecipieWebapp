@@ -37,7 +37,7 @@
             </div>      
             
             <div class="form-group">
-                <label for="instructions">Put the steps for cooking the recipie<strong style="color:red;">(Seperate each step by using "#")</strong></label>
+                <label for="instructions">Put the steps for cooking the recipie<strong style="color:red;">(Seperate each step by using "#" without giving space or enter)</strong></label>
                 <textarea class="form-control" id="instructions" rows="7" name="instructions" required ></textarea>
             </div>
             <label for="image file" style="margin-bottom:10px">Upload a high quality image of the recipie added(in jpg format)</label>
@@ -46,7 +46,7 @@
                 <input type="file" class="form-control" id="inputGroupFile02" name="upload" required>
             </div>
             <button class="btn btn-primary" type="submit">Submit</button>
-            <a href="http://127.0.0.1:8000/" class="btn btn-primary">Go Back</a>
+            <a href="{% url 'index' %}" class="btn btn-primary">Go Back</a>
         </form>
         
     
