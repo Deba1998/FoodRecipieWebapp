@@ -21,7 +21,7 @@ cryptography==2.8
 cssselect==1.1.0
 #cupshelpers==1.0
 cycler==0.10.0
-dblatex===0.3.11py3
+#dblatex===0.3.11py3
 dbus-python==1.2.16
 defer==1.0.6
 distro==1.6.0
