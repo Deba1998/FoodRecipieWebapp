@@ -88,7 +88,7 @@ pyppeteer==0.2.6
 pyquery==1.4.3
 pyRFC3339==1.1
 pyrsistent==0.18.0
-python-apt==2.0.0+ubuntu0.20.4.7
+#python-apt==2.0.0+ubuntu0.20.4.7
 python-dateutil==2.7.3
 python-debian===0.1.36ubuntu1
 python-dotenv==0.19.2
