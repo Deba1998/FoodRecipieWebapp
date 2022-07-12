@@ -1,0 +1,41 @@
+{% load static %}
+{% static "/" as baseURL%}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Food ingredients Site</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="card text-center" >
+        <div class="card-body">
+          <h1 class="card-title">{{recipie.name}}</h1>
+          <img  src='{{baseURL}}{{recipie.prikey}}.jpg' style="width:700px; height:450px;">
+          <h3 class="card-text mt-3 px:3">Ingredients</h3>
+          <p class="card-text my-1 px-2.7 " style="text-align:justify;" > {{recipie.ingredients}}</p>
+          <h3 class="card-text mt-3 ">Instructions</h3> 
+          <ol id="myList" style="text-align:justify;  padding:15px;"></ol>
+          <script type="text/javascript">
+            var str = "{{recipie.instructions}}";
+            let result = str.split('#');
+            console.log(result);
+            let list = document.getElementById("myList");
+            result.forEach((item) => {
+              let li = document.createElement("li");
+              li.innerText = item;
+              list.appendChild(li);
+            });
+           </script>
+           <a href= "{% url 'index' %}" class="btn btn-primary">Go Back</a>
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
+

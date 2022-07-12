@@ -1,0 +1,70 @@
+{% load static %}
+{% static "/" as baseURL%}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Search results</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    <h2 class="text-center" style="margin-left: 20px; margin-top:10px;"> Search Results:  </h5>
+
+        <hr>
+
+        <div class="container">
+
+            <div class="row justify-content-center m-4">
+
+                {% if products %}
+                    <script>
+                        console.log("hi deba");
+                    </script>
+    
+                    {% for key in products %}
+        
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                         
+                          <img src='{{baseURL}}{{key.prikey}}.jpg'   style="height:265px;" class="d-block w-100" alt="...">
+                          
+                          <div class="card-body">
+                            <p class="card-text" style="height:190px;" >{{key.desc}}</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                              <div class="btn-group">
+                                <a class="btn btn-sm btn-outline-secondary" href='viewdetails/{{key.prikey}}' role="button">View</a>
+                                <a class="btn btn-sm btn-outline-secondary" href='editdetails/{{key.prikey}}' role="button">Edit</a> 
+                                <button type="button" class="btn btn-sm btn-danger" onclick="myFunction()">
+                                  Delete
+                                </button>
+      
+                                <script>
+                                  function myFunction() {
+                                    let text;
+                                    if (confirm("Press Ok to delete the recipie permanently!") == true) {
+                                      window.location.href = "deletedetails/{{key.prikey}}";
+                                    } else {
+                                      window.location.href = " ";
+                                    }
+                                  }
+                                  </script>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+        
+                    {% endfor %}
+        
+                {% else %}
+                     <p>No Products available </p>
+                {% endif %}
+    
+            </div>
+
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
