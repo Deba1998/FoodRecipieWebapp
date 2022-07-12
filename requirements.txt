@@ -3,7 +3,7 @@ alabaster
 babel
 bcrypt
 blinker
-brlapi
+#brlapi
 cached-property
 certifi
 chardet
