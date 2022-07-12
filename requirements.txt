@@ -1,5 +1,5 @@
 alabaster
-apturl
+# apturl
 babel
 bcrypt
 blinker
